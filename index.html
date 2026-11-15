@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jilhaz Hasan Noyon – Entrepreneur &amp; Student</title>
+<meta name="description" content="Portfolio of Jilhaz Hasan Noyon: entrepreneur, logistics manager and entrepreneurship student in Dhaka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#e6e7ea; --panel:#f6f6f7; --ink:#2b2c3a; --muted:#5d5f70; --line:#c4c6cd;
+  --accent:#d9482a; --accent-ink:#ffffff; --deep:#2b2c3a; --deep-ink:#f1f1f4;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#1a1b24; --panel:#232430; --ink:#ececf1; --muted:#a2a4b4; --line:#3a3c4c;
+    --accent:#ff7a59; --accent-ink:#1a1b24; --deep:#10111a; --deep-ink:#ececf1;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#1a1b24; --panel:#232430; --ink:#ececf1; --muted:#a2a4b4; --line:#3a3c4c;
+  --accent:#ff7a59; --accent-ink:#1a1b24; --deep:#10111a; --deep-ink:#ececf1;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.5rem}
+
+/* top bar */
+header.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:3.75rem;gap:1rem}
+.logo{font:800 1.15rem var(--display);text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:1.4rem;align-items:center}
+nav a{font-weight:500;font-size:.95rem;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+#theme{font:inherit;font-size:.9rem;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:2rem;padding:.3rem .8rem;cursor:pointer}
+
+/* hero */
+.hero{background:var(--deep);color:var(--deep-ink);padding:clamp(3rem,9vw,6.5rem) 0 clamp(2.5rem,6vw,4rem);overflow:hidden}
+.hero h1{font:800 clamp(3rem,11.5vw,8.5rem)/.9 var(--display);letter-spacing:-.035em}
+.hero h1 span{display:block}
+.hero .role{margin-top:1.75rem;font:500 clamp(1.15rem,2.4vw,1.5rem) var(--display)}
+.hero p.lead{margin-top:1rem;max-width:34rem;color:color-mix(in srgb,var(--deep-ink) 78%,transparent)}
+.cta{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:.3rem;font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.alt{color:var(--deep-ink);border-color:color-mix(in srgb,var(--deep-ink) 40%,transparent)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+
+/* manifest strip: the one memorable element */
+.manifest{background:var(--accent);color:var(--accent-ink)}
+.manifest ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.manifest li{padding:1.1rem 1rem 1.1rem 0;border-right:1px dashed color-mix(in srgb,var(--accent-ink) 55%,transparent);padding-left:1rem}
+.manifest li:first-child{padding-left:0}
+.manifest li:last-child{border-right:0}
+.manifest b{display:block;font:800 1.6rem/1.1 var(--display)}
+.manifest small{font-size:.85rem;font-weight:500}
+
+section{padding:clamp(3rem,7vw,5rem) 0;border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:13rem 1fr;gap:2rem 3rem}
+h2{font:700 1.7rem/1.15 var(--display);letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:.95rem;margin-top:.4rem}
+
+/* about */
+.about p{font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.4;font-family:var(--display);font-weight:500;max-width:36rem}
+.about p+p{font:400 1.0625rem/1.65 var(--body);color:var(--muted);margin-top:1.2rem;max-width:34rem}
+
+/* experience as bill of lading */
+.row{display:grid;grid-template-columns:1fr auto;gap:.25rem 2rem;padding:1.6rem 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0;padding-top:0}
+.row h3{font:700 1.3rem var(--display)}
+.row .what{color:var(--muted)}
+.row .tag{align-self:start;font-weight:600;font-size:.9rem;border:1.5px solid var(--ink);padding:.15rem .7rem;border-radius:2rem;white-space:nowrap}
+.row .role-line{font-weight:600}
+
+/* skills */
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;padding:0}
+.chips li{background:var(--panel);border:1px solid var(--line);padding:.55rem 1rem;border-radius:.3rem;font-weight:500}
+
+/* education */
+.edu{background:var(--panel);border:1px solid var(--line);padding:1.6rem;border-radius:.4rem}
+.edu h3{font:700 1.3rem var(--display)}
+.edu p{color:var(--muted)}
+.cgpa{display:inline-block;margin-top:.9rem;font:800 1.9rem var(--display);color:var(--accent)}
+.cgpa small{font:500 .9rem var(--body);color:var(--muted);margin-left:.4rem}
+
+/* contact */
+.contact h2{font-size:clamp(2rem,6vw,3.6rem);line-height:1;letter-spacing:-.025em;margin-bottom:1.5rem}
+.contact dl{display:grid;grid-template-columns:7rem 1fr;gap:.7rem 1rem;max-width:34rem}
+.contact dt{color:var(--muted)}
+.contact dd{font-weight:500}
+.contact a{text-underline-offset:.2em}
+footer{padding:1.5rem 0 2.5rem;color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  nav a{display:none}
+  .grid{grid-template-columns:1fr}
+  .manifest ul{grid-template-columns:1fr 1fr}
+  .manifest li{border-right:0;padding-left:0;border-bottom:1px dashed color-mix(in srgb,var(--accent-ink) 55%,transparent)}
+  .row{grid-template-columns:1fr}
+  .contact dl{grid-template-columns:1fr;gap:.1rem}
+  .contact dd{margin-bottom:.8rem}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#top">JHN</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button id="theme" type="button" aria-label="Switch colour theme">Dark mode</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1><span>Jilhaz</span><span>Hasan Noyon</span></h1>
+      <p class="role">Entrepreneur and student</p>
+      <p class="lead">I build scalable businesses and solve real-world problems through innovation. I run accounts and operations in freight logistics and study how new ventures get funded.</p>
+      <div class="cta">
+        <a class="btn main" href="mailto:jilhazhasannoyon@gmail.com">Email me</a>
+        <a class="btn alt" href="#experience">See my experience</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="manifest">
+    <div class="wrap">
+      <ul>
+        <li><b>2 years</b><small>Managing at Bohon Freight Logistics</small></li>
+        <li><b>6 months</b><small>Venture capital internship</small></li>
+        <li><b>3.66</b><small>CGPA, Bachelor of Entrepreneurship</small></li>
+        <li><b>2 languages</b><small>English and Bangla</small></li>
+      </ul>
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <div class="wrap grid">
+      <div><h2>About</h2></div>
+      <div>
+        <p>I like turning an idea into a business that can grow without breaking.</p>
+        <p>My work so far sits between two worlds: day-to-day operations in logistics, and the money side of young companies. Together they show me how a business runs and how it gets started.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap grid">
+      <div><h2>Experience</h2><p class="sub">Work and training</p></div>
+      <div>
+        <article class="row">
+          <div>
+            <h3>Bohon Freight Logistics</h3>
+            <p class="role-line">Manager</p>
+            <p class="what">Handled accounts and day-to-day operations.</p>
+          </div>
+          <span class="tag">2 years</span>
+        </article>
+        <article class="row">
+          <div>
+            <h3>Bangladesh Venture Capital Ltd</h3>
+            <p class="role-line">Intern</p>
+            <p class="what">Financial data analysis and startup funding.</p>
+          </div>
+          <span class="tag">6 months</span>
+        </article>
+        <article class="row">
+          <div>
+            <h3>SME Foundation</h3>
+            <p class="role-line">Training</p>
+            <p class="what">New business creation, business planning and strategy.</p>
+          </div>
+          <span class="tag">Training</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap grid">
+      <div><h2>Skills</h2></div>
+      <ul class="chips">
+        <li>Leadership</li>
+        <li>Marketing</li>
+        <li>Branding</li>
+        <li>CRM</li>
+        <li>Basic MS Office</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap grid">
+      <div><h2>Education</h2></div>
+      <div class="edu">
+        <h3>Daffodil International University</h3>
+        <p>Bachelor of Entrepreneurship, focus on Innovation and Entrepreneurship</p>
+        <p>Currently in the 5th semester</p>
+        <span class="cgpa">3.66<small>CGPA</small></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" style="border-bottom:0">
+    <div class="wrap">
+      <h2>Let’s talk about your next venture.</h2>
+      <dl>
+        <dt>Email</dt><dd><a href="mailto:jilhazhasannoyon@gmail.com">jilhazhasannoyon@gmail.com</a></dd>
+        <dt>Phone</dt><dd><a href="tel:+8801570206796">+880 1570206796</a></dd>
+        <dt>Location</dt><dd>Middle Paikpara, Mirpur-1, Dhaka</dd>
+        <dt>Languages</dt><dd>English, Bangla</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Jilhaz Hasan Noyon</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme');
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  function isDark(){
+    var t=root.getAttribute('data-theme');
+    return t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+  function label(){btn.textContent=isDark()?'Light mode':'Dark mode';}
+  btn.addEventListener('click',function(){
+    root.setAttribute('data-theme',isDark()?'light':'dark');label();
+  });
+  label();
+})();
+</script>
+</body>
+</html>
